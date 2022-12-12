@@ -1,0 +1,6 @@
+---
+- name: install nginx
+  apt: name=nginx state=latest update_cache=yes  
+  notify: restart-nginx
+- name:   restart nginx 
+  service: name=nginx state=restarted
